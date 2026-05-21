@@ -1,5 +1,18 @@
 # Claude Code VS Code 扩展 — Auto Mode macOS 修复
 
+## 测试环境
+
+| 项目 | 值 |
+|------|-----|
+| **硬件** | MacBook Air M4 |
+| **操作系统** | macOS 25.5.0 (Darwin arm64) |
+| **VS Code 版本** | ^1.94.0（兼容） |
+| **Claude Code 扩展版本** | 2.1.145 |
+| **扩展目标平台** | darwin-arm64 |
+| **修改文件** | `extension/webview/index.js`（4.6MB） |
+| **修改方法** | 手动编辑或 sed 命令 |
+| **测试结果** | ✅ 修改后 auto mode 出现在权限模式下拉列表中，功能正常 |
+
 ## 问题背景
 
 在 VS Code 的 Claude Code 扩展中，权限模式下拉列表（Permission Mode）包含 `default`、`acceptEdits`、`plan`、`bypassPermissions` 等选项。其中 **auto mode** 是一种让 Claude 自动决策是否执行工具的模式。
